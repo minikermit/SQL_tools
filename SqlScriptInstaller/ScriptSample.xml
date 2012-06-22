@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Scripts>
+  <script path="Scripts\Sys objects\CheckDatabase.sql"></script>
+  <script path="Scripts\Sys objects\sp_Generate_Comments.sql"></script>
+  <script path="Scripts\Sys objects\sp_LocalPathToCreateDatabase.sql"></script>
+  <script path="Scripts\Application objects\CreateDatabase.sql"></script>
+  <script path="Scripts\Application objects\AddLogins.sql"></script>
+  <script path="Scripts\Application objects\AddJobs.sql"></script>
+  <script path="Scripts\Application objects\CreateTables.sql"></script>
+  <script path="Scripts\Application objects\CreateAppObjects.sql"></script>
+  <script path="Scripts\Initialize\Initialize.sql"></script>
+</Scripts>
