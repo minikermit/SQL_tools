@@ -3,9 +3,6 @@ using System.Collections;
 using System.Net;
 using System.Runtime.InteropServices;
 
-    /// <summary>
-    /// Класс, реализующий IEnumerator, возвращающий имена серверов в сети.
-    /// </summary>
     public class SQLEnumerator : IEnumerator {
         #region Instance variables
         private IntPtr serverInfoPtr;
@@ -17,7 +14,7 @@ using System.Runtime.InteropServices;
         #endregion
 
         static SQLEnumerator() {
-            // Получаем размер структуры NetBiosAPI.SERVER_INFO_101
+            // Get size of NetBiosAPI.SERVER_INFO_101 structure
             SQLEnumerator.SERVER_INFO_101_SIZE = Marshal.SizeOf(typeof(NetBiosAPI.SERVER_INFO_101));
         }
 
@@ -65,9 +62,7 @@ using System.Runtime.InteropServices;
         protected virtual void Dispose(bool disposing) {
             if (!this.disposed) {
                 if (disposing) {
-                    // TODO: put code to dispose managed resources
                 }
-                // TODO: put code to free unmanaged resources here
             }
             this.disposed = true;
         }
@@ -129,9 +124,7 @@ using System.Runtime.InteropServices;
         protected virtual void Dispose(bool disposing) {
             if (!disposed) {
                 if (disposing) {
-                    // TODO: put code to dispose managed resources
                 }
-                // TODO: put code to free unmanaged resources here
             }
             disposed = true;
         }

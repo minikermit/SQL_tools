@@ -2,7 +2,7 @@ using System;
 using System.Data.SqlClient;
 
     /// <summary>
-    /// Перечисление - определяет тип аутентификации для проверки подключения к SQL Server
+    /// Auth type for checking SQL Server connection
     /// </summary>
     public enum ConnectionType : byte {
         SSPI = 0,
@@ -75,14 +75,11 @@ using System.Data.SqlClient;
         #endregion
 
         /// <summary>
-        /// Тест на поключение. 
+        /// Test to connect 
         /// </summary>
         /// <returns>
-        /// Возвращает True при успешном завершении теста подключения.
+        /// True if connection is opened successfuly
         /// </returns>
-        /// <remarks>
-        /// При попытке неверного подключения выбросит исключение, генерируемое SqlConnection
-        /// </remarks>
         public bool Test() {
             bool res = false;
             SqlConnection cn = null;
@@ -114,7 +111,7 @@ using System.Data.SqlClient;
         }
 
         /// <summary>
-        /// Подает на выход объект последнего "рабочего" соединения
+        /// Return latest successfuly open connection
         /// </summary>
         public static SqlConnection LastTrustedConnection {
             get {
