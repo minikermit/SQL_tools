@@ -84,7 +84,7 @@ using System.Data.SqlClient;
             bool res = false;
             SqlConnection cn = null;
             try {
-                // Формируем строку подключения с помощью SqlConnectionStringBuilder
+                // Configure connection string using SqlConnectionStringBuilder
                 SqlConnectionStringBuilder cnBuilder = new SqlConnectionStringBuilder();
                 cnBuilder.DataSource = sServerName;
                 cnBuilder.Pooling = false;
